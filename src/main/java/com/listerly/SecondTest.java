@@ -1,20 +1,19 @@
 package com.listerly;
 
-import java.util.Date;
+import com.google.inject.servlet.RequestScoped;
 
 import javax.inject.Inject;
-
-import com.google.inject.servlet.RequestScoped;
+import java.util.Date;
 
 @RequestScoped
 public class SecondTest {
 
 	@Inject
 	private Date date;
-	
+
 	public SecondTest() {
 	}
-	
+
 	public Date getDate() {
 		return date;
 	}
