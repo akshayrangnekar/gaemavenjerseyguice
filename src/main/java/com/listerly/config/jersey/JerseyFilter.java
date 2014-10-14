@@ -6,7 +6,6 @@ import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import java.io.IOException;
 
 /**
@@ -16,15 +15,15 @@ import java.io.IOException;
 @SuppressWarnings("serial")
 public class JerseyFilter extends ServletContainer {
 
-    @Override
-    public void doFilter(HttpServletRequest req, HttpServletResponse res, FilterChain chain)
-            throws IOException, ServletException {
+	@Override
+	public void doFilter(HttpServletRequest req, HttpServletResponse res, FilterChain chain)
+			throws IOException, ServletException {
 
-        String path = req.getServletPath();
-        if (path.startsWith("/_ah/") || path.equals("/form")) {
-            chain.doFilter(req, res);
-        } else {
-            super.doFilter(req, res, chain);
-        }
-    }
+		String path = req.getServletPath();
+		if (path.startsWith("/_ah/") || path.equals("/form")) {
+			chain.doFilter(req, res);
+		} else {
+			super.doFilter(req, res, chain);
+		}
+	}
 }

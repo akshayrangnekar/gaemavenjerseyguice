@@ -8,8 +8,8 @@ public class ListerlyServletModule extends ServletModule {
 
 	@Override
 	protected void configureServlets() {
-	    serve("/hi").with(HelloWorldServlet.class);
-	    bind(SecondTest.class);
+		serve("/hi").with(HelloWorldServlet.class);
+		bind(SecondTest.class);
 	}
 
 }
